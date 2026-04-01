@@ -1,0 +1,6 @@
+{
+  "pipeline_name": "citadel-gps",
+  "environment": "dev",
+  "notes": "Placeholder config uploaded by terraform assets module."
+}
+
