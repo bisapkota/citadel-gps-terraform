@@ -1,6 +1,14 @@
 {
-  "pipeline_name": "citadel-gps",
-  "environment": "dev",
-  "notes": "Placeholder config uploaded by terraform assets module."
+  "glue_arguments": {
+    "--S3_BUCKET": "lm-sandbox-pipeline-citadel",
+    "--RAW_INPUT_PATH": "s3://lm-sandbox-pipeline-citadel/raw/3month_commute",
+    "--PREPROCESS_OUTPUT_PATH": "s3://lm-sandbox-pipeline-citadel/runs/dev/preprocessing",
+    "--DC_OUTPUT_PATH": "s3://lm-sandbox-pipeline-citadel/runs/dev/data-cleaning",
+    "--STAYMOVE_OUTPUT_PATH": "s3://lm-sandbox-pipeline-citadel/runs/dev/staymove-extraction",
+    "--TRIP_SEGMENTATION_OUTPUT_PATH": "s3://lm-sandbox-pipeline-citadel/runs/dev/trip-segmentation",
+    "--FOOTFALL_OUTPUT_PATH": "s3://lm-sandbox-pipeline-citadel/runs/dev/footfall",
+    "--POI_PATH": "s3://lm-sandbox-pipeline-citadel/poi/ukraine_filtered.csv",
+    "--TIME_ZONE": "Asia/Tokyo",
+    "--BBOX": ""
+  }
 }
-

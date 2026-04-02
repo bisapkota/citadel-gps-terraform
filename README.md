@@ -43,3 +43,14 @@ terraform apply -var-file=terraform.dev.tfvars
 
 3. Start the state machine using `invoke.sh` or AWS Console.
 
+Execution input must always include `glue_arguments.--BBOX`.
+When bbox filtering is not needed, set it to an empty string:
+```json
+{
+  "glue_arguments": {
+    "--BBOX": ""
+  }
+}
+```
+
+The `data-cleaning` module already treats blank bbox as "do not filter", so this keeps the Step Functions definition simple while avoiding JSONPath failures.
